@@ -16,5 +16,5 @@ if not exist manifest.txt echo Main-Class: Main > manifest.txt
 @REM create the jar file
 jar cfm out.jar manifest.txt -C build .
 
-@REM run the jar file
-java -jar out.jar
+@REM run the jar file and pass all arguments
+java -jar out.jar %*
